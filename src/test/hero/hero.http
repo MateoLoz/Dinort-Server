@@ -1,0 +1,4 @@
+### GET HERO 
+
+GET http://localhost:3035/api/hero/
+Content-Type: application/json

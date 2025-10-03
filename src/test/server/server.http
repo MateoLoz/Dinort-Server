@@ -1,0 +1,6 @@
+### GET SERVER STATUS
+
+GET http://localhost:3035/
+Content-Type: application/json
+
+
