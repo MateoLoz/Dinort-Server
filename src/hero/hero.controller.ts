@@ -9,7 +9,7 @@ export async function heroGetHeroController(req: Request, res: Response) {
             message:'algo salio mal!'
         })
     }
-    res.set('Cache-Control', 'public, max-age=120');
+    res.set('Cache-Control', 'public, max-age=86400');
     res.status(200).json({
      hero:response
     })
