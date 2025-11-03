@@ -1,10 +1,5 @@
 ### GET MACHINES
 
-GET http://localhost:3035/api/machines/es
+GET http://localhost:3035/api/machines/br
 Content-Type: application/json
 
-GET http://localhost:3035/api/machines/en
-Content-Type: application/json
-
-GET http://localhost:3035/api/machines/pt
-Content-Type: application/json

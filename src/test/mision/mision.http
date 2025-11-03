@@ -1,0 +1,4 @@
+## [GET] about-us by lang
+
+GET http://localhost:3035/api/mision/br
+Content-Type: application/json

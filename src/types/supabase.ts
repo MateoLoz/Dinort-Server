@@ -14,6 +14,33 @@ export type Database = {
   }
   public: {
     Tables: {
+      about_us: {
+        Row: {
+          created_at: string
+          history: string
+          id: number
+          languague: string
+          mision: string
+          work: string
+        }
+        Insert: {
+          created_at?: string
+          history?: string
+          id?: number
+          languague?: string
+          mision?: string
+          work?: string
+        }
+        Update: {
+          created_at?: string
+          history?: string
+          id?: number
+          languague?: string
+          mision?: string
+          work?: string
+        }
+        Relationships: []
+      }
       candidates: {
         Row: {
           cover_letter: string | null
@@ -192,6 +219,33 @@ export type Database = {
           id?: number
           metadata?: Json
           metric_type?: string
+        }
+        Relationships: []
+      }
+      mision: {
+        Row: {
+          created_at: string
+          id: number
+          languague: string
+          metadata: Json | null
+          mision: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+          languague?: string
+          metadata?: Json | null
+          mision?: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: number
+          languague?: string
+          metadata?: Json | null
+          mision?: string
+          updated_at?: string | null
         }
         Relationships: []
       }
