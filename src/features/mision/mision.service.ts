@@ -1,6 +1,6 @@
-import { supabase } from "../../lib/supabaseClient.js";
+import { supabase } from "../../lib/supabaseClient";
 
-import type { mision } from "@/types/mision/mision.types.js";
+import type { mision } from "@/types/mision/mision.types";
 
 export default async function getMision(lang : string) : Promise< mision | null> {
     const {data, error}  = await supabase
