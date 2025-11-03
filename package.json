@@ -32,5 +32,11 @@
     "express-rate-limit": "^8.1.0",
     "supabase": "^2.48.3",
     "zod": "^4.1.11"
-  }
+  },
+   "imports": {
+    "#/controllers/*":["./dist/features/*.js"],
+    "#/types/*": ["./dist/features/*.js"],
+    "#/service/*": ["./dist/features/*.js"],
+    "#/routes/*": ["./dist/features/*.js"]
+   }
 }
