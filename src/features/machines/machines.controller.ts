@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import getAllMachinesService from "./machines.getmachines.service";
+import getAllMachinesService from "./machines.getmachines.service.js";
 
 export async function MachineController (req: Request, res : Response) {
   const { languague } = req.params;

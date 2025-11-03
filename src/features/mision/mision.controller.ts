@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import getMision from "@/service/mision/mision.service";
+import  getMision  from "@/service/mision/mision.service.js";
 
 export default async function misionController (req:Request, res:Response) {
     const {lang} = req.params;

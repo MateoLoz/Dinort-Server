@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import getAboutUs from "./about.service";
-import { About } from "./about.types";
+import getAboutUs from "./about.service.js";
+import { About } from "./about.types.js";
 
 export default async function AboutController(req: Request, res: Response) : Promise< Response | About > {
     
