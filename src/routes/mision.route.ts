@@ -1,5 +1,5 @@
 import { Router } from "express";
-import misionController from "#/controllers/mision/mision.controller";
+import misionController from "../features/mision/mision.controller";
 
 const router = Router();
 

@@ -8,13 +8,7 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "outDir": "./dist",
-    "baseUrl":"./",
-    "paths":{
-      "#/controllers/*":["src/features/*"],
-      "#/types/*": ["src/features/*"],
-      "#/service/*": ["src/features/*"],
-      "#/routes/*": ["src/routes/*"],
-    }
+    "baseUrl":".",
   },
   "include": ["src/**/*"]
 }

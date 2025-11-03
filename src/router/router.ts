@@ -2,7 +2,7 @@ import { Router } from "express";
 import heroRouter from "../routes/hero.routes";
 import machinesRouter from "../routes/machines.routes";
 import AboutRouter from '../routes/about.routes';
-import misionRouter from '#/routes/mision.route';
+import misionRouter from '../routes/mision.route';
 
 const router = Router();
 

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { MachineController } from "#/controllers/machines/machines.controller";
+import { MachineController } from "../features/machines/machines.controller";
 
 const machinesRouter = Router();
 
