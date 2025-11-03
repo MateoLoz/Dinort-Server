@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { MachineController } from "../machines/machines.controller";
+import { MachineController } from "@/controllers/machines/machines.controller";
+
 const machinesRouter = Router();
 
 machinesRouter.get('/:languague', MachineController);

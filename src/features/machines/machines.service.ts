@@ -1,4 +1,4 @@
-import { supabase } from "../lib/supabaseClient";
+import { supabase } from "../../lib/supabaseClient";
 
 export default async function getMachines(lang : string) {
     const { data, error } = await supabase
@@ -11,5 +11,8 @@ export default async function getMachines(lang : string) {
         console.log('failed to fetch machines', error);
         return null;
      }
+
+     
+
      return data;
 }

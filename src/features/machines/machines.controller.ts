@@ -10,7 +10,7 @@ export async function MachineController (req: Request, res : Response) {
         message:'saomething went wrong!'
     })
   }
-  res.set('cache-Control','public, max-age=120')
+  res.set('cache-Control','public, max-age=86400')
   res.status(200).json({
     machines:response
   })

@@ -5,7 +5,14 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "baseUrl":".",
+    "paths":{
+      "@/controllers/*":["src/features/*"],
+      "@/types/*": ["src/features/*"],
+      "@/service/*": ["src/features/*"],
+      "@/routes/*": ["src/routes/*"],
+    }
   },
   "include": ["src/**/*"]
 }
