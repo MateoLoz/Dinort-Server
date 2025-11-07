@@ -1,4 +1,4 @@
-import { supabase } from "src/lib/supabaseClient";
+import { supabase } from "../lib/supabaseClient";
 import type { Tag } from "./tag.types";
 
 export default async function getTagById (lang : string) : Promise<Tag | null>  {
