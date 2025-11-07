@@ -20,7 +20,6 @@ export type Database = {
           history: string
           id: number
           languague: string
-          mision: string
           work: string
         }
         Insert: {
@@ -28,7 +27,6 @@ export type Database = {
           history?: string
           id?: number
           languague?: string
-          mision?: string
           work?: string
         }
         Update: {
@@ -36,7 +34,6 @@ export type Database = {
           history?: string
           id?: number
           languague?: string
-          mision?: string
           work?: string
         }
         Relationships: []
@@ -145,13 +142,34 @@ export type Database = {
           },
         ]
       }
+      machine_tags: {
+        Row: {
+          created_at: string
+          id: number
+          lang: string
+          metadata: Json | null
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+          lang: string
+          metadata?: Json | null
+        }
+        Update: {
+          created_at?: string
+          id?: number
+          lang?: string
+          metadata?: Json | null
+        }
+        Relationships: []
+      }
       machine_translation: {
         Row: {
           created_at: string
           description: string
           id: number
           languague: string
-          machine_id: number | null
+          machine_id: number
           machine_name: string
           type: string | null
         }
@@ -160,7 +178,7 @@ export type Database = {
           description?: string
           id?: number
           languague?: string
-          machine_id?: number | null
+          machine_id: number
           machine_name?: string
           type?: string | null
         }
@@ -169,7 +187,7 @@ export type Database = {
           description?: string
           id?: number
           languague?: string
-          machine_id?: number | null
+          machine_id?: number
           machine_name?: string
           type?: string | null
         }

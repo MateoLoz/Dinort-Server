@@ -6,9 +6,7 @@ export function toMachineDto (machine : Machine) : MachineDto {
     id: machine.id,
     machineImage: machine.machines?.machine_image!,
     description: machine.description,
-    languague: machine.languague,
     machineName: machine.machine_name,
-    type: machine.type,
     }
 }
 
