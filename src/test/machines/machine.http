@@ -1,5 +1,5 @@
 ### GET MACHINES
 
-GET http://localhost:3035/api/machines/br
+GET http://localhost:3035/api/machines/es
 Content-Type: application/json
 

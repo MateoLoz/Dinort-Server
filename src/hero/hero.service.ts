@@ -22,7 +22,6 @@ for (const item of hero) {
     item.client_logo = signedUrl; 
   } catch (err) {
     console.log('Error generando signed URL para', item.client_logo, err);
-
     item.client_logo = item.client_logo;
   }
 }
