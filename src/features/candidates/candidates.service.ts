@@ -1,7 +1,7 @@
 import { ICandidates } from "./candidates.interface";
 import { CandidateDto } from "./candidates.dto";
-import { supabase } from "src/lib/supabaseClient";
-import { mapToInsert } from "src/utils/mappers/candidates";
+import { supabase } from "../../lib/supabaseClient";
+import { mapToInsert } from "../../utils/mappers/candidates";
 
 class CandidateService implements ICandidates{
 
