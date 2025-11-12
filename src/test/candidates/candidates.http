@@ -1,0 +1,22 @@
+### POST Candidates
+
+POST http://localhost:3035/api/candidates/
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="firstName"
+
+Mateo
+------WebKitFormBoundary
+Content-Disposition: form-data; name="lastName"
+
+Lozano
+------WebKitFormBoundary
+Content-Disposition: form-data; name="email"
+
+mateolozguardia@gmail.com
+------WebKitFormBoundary
+Content-Disposition: form-data; name="heardFrom"
+
+LinkedIn
+------WebKitFormBoundary--

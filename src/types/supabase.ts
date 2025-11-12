@@ -45,6 +45,7 @@ export type Database = {
           cv: string
           email: string
           full_name: string
+          heard_from: string
           id: number
         }
         Insert: {
@@ -53,6 +54,7 @@ export type Database = {
           cv?: string
           email?: string
           full_name?: string
+          heard_from?: string
           id?: number
         }
         Update: {
@@ -61,6 +63,7 @@ export type Database = {
           cv?: string
           email?: string
           full_name?: string
+          heard_from?: string
           id?: number
         }
         Relationships: []
@@ -275,6 +278,7 @@ export type Database = {
           full_name: string
           how_heard: string
           id: number
+          Organization: string
           phone_number: string
         }
         Insert: {
@@ -284,6 +288,7 @@ export type Database = {
           full_name?: string
           how_heard?: string
           id?: number
+          Organization?: string
           phone_number?: string
         }
         Update: {
@@ -293,6 +298,7 @@ export type Database = {
           full_name?: string
           how_heard?: string
           id?: number
+          Organization?: string
           phone_number?: string
         }
         Relationships: []
