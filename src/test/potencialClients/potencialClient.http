@@ -1,0 +1,13 @@
+## [POST] potencial_clients
+
+POST http://localhost:3035/api/potencialclients/
+Content-Type: application/json
+
+{
+    "firstName":"Mateo",
+    "lastName":"Lozano",
+    "Organization":"Mateo Lozano inc",
+    "email":"mateolozguardia@gmail.com",
+    "phone":"+54 381 301 5875",
+    "message":"Lorem ipsum factum lorem ipsum factum"
+}
