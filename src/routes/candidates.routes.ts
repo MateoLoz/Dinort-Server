@@ -1,7 +1,7 @@
 import { Router } from "express";
 import  multer from 'multer';
-import { validate } from "src/middleware/validate";
-import { CandidateSchema } from "src/schema/candidates.schema";
+import { validate } from "../middleware/validate";
+import { CandidateSchema } from "../schema/candidates.schema";
 
 import CandidatesController from "src/features/candidates/candidates.controller";
 import CandidateService from "src/features/candidates/candidates.service";
