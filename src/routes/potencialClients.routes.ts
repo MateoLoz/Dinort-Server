@@ -1,7 +1,7 @@
 import { Router } from "express";
 
-import PotencialClientsController from "src/features/potencialClients/potencialClients.controller";
-import { PotencialClientService } from "src/features/potencialClients/potencialClients.service";
+import PotencialClientsController from "../features/potencialClients/potencialClients.controller";
+import { PotencialClientService } from "../features/potencialClients/potencialClients.service";
 
 const router = Router();
 
