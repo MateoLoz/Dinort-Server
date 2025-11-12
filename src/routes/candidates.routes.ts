@@ -3,8 +3,8 @@ import  multer from 'multer';
 import { validate } from "../middleware/validate";
 import { CandidateSchema } from "../schema/candidates.schema";
 
-import CandidatesController from "src/features/candidates/candidates.controller";
-import CandidateService from "src/features/candidates/candidates.service";
+import CandidatesController from "../features/candidates/candidates.controller";
+import CandidateService from "../features/candidates/candidates.service";
 
 const upload = multer({ storage: multer.memoryStorage() });
 
