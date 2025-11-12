@@ -1,10 +1,10 @@
-import { supabase } from "src/lib/supabaseClient";
+import { supabase } from "../../lib/supabaseClient";
 
 import { IPotencialClienteInterface } from "./potencialClient.interface";
 
 import type { PotencialClientDto } from "./potencialClient.dto";
 import type { PotencialClient } from "./potencialClients.types";
-import { mapPotencialClientsToInsert } from "src/utils/mappers/potencialClients";
+import { mapPotencialClientsToInsert } from "../../utils/mappers/potencialClients";
 
 
 export class PotencialClientService implements  IPotencialClienteInterface{
