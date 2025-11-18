@@ -6,17 +6,17 @@ class CandidatesController {
 
     async postCandidates (req: Request, res : Response) {
         const payload = req.body;
-        const cv = req.file?.buffer;
+        const cv = req.file;
 
           if(!cv) return res.status(400).json({message: 'error al subir el archivo!'});
 
-         const file = await this.candidateservice.postCurriculumOnBucket(cv, payload.firstName, payload.lastName);
+         const file = await this.candidateservice.postCurriculumOnBucket(cv.buffer, payload.firstName, payload.lastName, cv.mimetype);
 
          if(file instanceof Error) return res.status(500).json({message:'Error al subir el archivo al servidor!'});
 
          const fileUrl = await this.candidateservice.getSignedUrlOfCurriculum(file.path);
         
-        payload.Curriculum = fileUrl;
+        payload.Curriculum = fileUrl?.publicUrl;
 
         const response = await this.candidateservice.postCandidates(payload);
 
