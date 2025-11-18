@@ -20,19 +20,24 @@ class CandidateService implements ICandidates{
         return data;
     }
 
-    async postCurriculumOnBucket(buffer: Buffer, firstName: string, lastName: string)
+    async postCurriculumOnBucket(buffer: Buffer, firstName: string, lastName: string, mimetype: string)
     : Promise<{ path: string } | Error> {
         try {
           const filePath = `cv-${firstName}-${lastName}-${Date.now()}`;
+
+          console.log('🚛 uploading file to bucket!');
+
           const { error, data } = await supabase.storage
             .from("candidates")
             .upload(filePath, buffer, {
-              upsert: false, 
+            upsert: false,
+            contentType: mimetype,
             });
-
+          
           if (error) throw error;
 
           return { path: data.path };
+
         } catch (err) {
           console.error(err);
           return new Error("Error al guardar el archivo en Supabase Storage");
