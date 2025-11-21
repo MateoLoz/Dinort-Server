@@ -2,7 +2,7 @@ import type { Request, Response } from "express";
 import CandidateService from "./candidates.service";
 
 class CandidatesController {
-    constructor (private readonly candidateservice : CandidateService){}
+    constructor (private readonly candidateservice: CandidateService){}
 
     async postCandidates (req: Request, res : Response) {
         const payload = req.body;

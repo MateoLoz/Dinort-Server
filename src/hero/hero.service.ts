@@ -1,6 +1,7 @@
 import type { Hero } from "./hero.types";
 import { supabase } from "../lib/supabaseClient";
 
+
 const signedUrlCache = new Map<string, { url: string; expiresAt: number }>();
 
 export async function getHero() : Promise<Hero[] | null> {

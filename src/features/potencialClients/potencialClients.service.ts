@@ -1,20 +1,20 @@
 import { supabase } from "../../lib/supabaseClient";
 
-import { IPotencialClienteInterface } from "./potencialClient.interface";
+import { IPotencialClientsInterface } from "./potencialClient.interface";
 
 import type { PotencialClientDto } from "./potencialClient.dto";
 import type { PotencialClient } from "./potencialClients.types";
 import { mapPotencialClientsToInsert } from "../../utils/mappers/potencialClients";
 
 
-export class PotencialClientService implements  IPotencialClienteInterface{
+export class PotencialClientsService implements  IPotencialClientsInterface{
    
     async postPotencialClient(payload: PotencialClientDto): Promise<PotencialClient | null> {
         const dbPayload = await mapPotencialClientsToInsert(payload);
           const {data, error} = await supabase
           .from("potencial_clients")
           .insert(dbPayload)
-          .select(` email, full_name, description, how_heard, phone_number`)
+          .select(`email, full_name, description, how_heard, phone_number`)
           .maybeSingle()
         
           if(error) {
