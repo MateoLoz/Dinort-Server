@@ -1,10 +1,14 @@
 import { Router } from "express";
+import { validate } from "src/middleware/validate";
+import { potencialClientSchema } from "src/schema/candidates.schema";
 import PotencialClientsController from "../features/potencialClients/potencialClients.controller";
+import { PotencialClientsService } from "src/features/potencialClients/potencialClients.service";
 
 const router = Router();
 
-const potencialClientController = new PotencialClientsController();
+const service = new PotencialClientsService()
+const potencialClientController = new PotencialClientsController(service);
 
-router.post('/',potencialClientController.postPotencialClients.bind(potencialClientController));
+router.post('/', validate(potencialClientSchema), potencialClientController.postPotencialClients.bind(potencialClientController));
 
 export default router; 

@@ -11,12 +11,13 @@ export class PotencialClientsService implements  IPotencialClientsInterface{
    
     async postPotencialClient(payload: PotencialClientDto): Promise<PotencialClient | null> {
         const dbPayload = await mapPotencialClientsToInsert(payload);
+
           const {data, error} = await supabase
           .from("potencial_clients")
           .insert(dbPayload)
           .select(`email, full_name, description, how_heard, phone_number`)
           .maybeSingle()
-        
+
           if(error) {
             console.log('error saing potencial client in db', error.message);
             return null;
