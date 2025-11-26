@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { validate } from "src/middleware/validate";
-import { potencialClientSchema } from "src/schema/candidates.schema";
+import { potencialClientSchema } from "../schema/candidates.schema";
 import PotencialClientsController from "../features/potencialClients/potencialClients.controller";
 import { PotencialClientsService } from "src/features/potencialClients/potencialClients.service";
 
