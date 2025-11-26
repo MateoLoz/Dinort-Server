@@ -1,14 +1,18 @@
+import 'reflect-metadata';
+import { injectable} from 'tsyringe';
 import type { Request, Response } from "express";
-import { PotencialClientService } from "./potencialClients.service";
+import { PotencialClientsService } from "./potencialClients.service";
+
+
 
 class PotencialClientsController {
-    constructor(private readonly service : PotencialClientService){}
+    constructor(private readonly service: PotencialClientsService){}
 
     async postPotencialClients (req: Request, res : Response) {
 
-           const payload = req.body;
+           const payload = req.body; 
            const response = await this.service.postPotencialClient(payload);
-           if(!response) return res.status(404).json({message:'something went wrong saving client in db!'});
+           if(!response) return res.status(500).json({message:'something went wrong saving client in db!'});
            return res.status(201).json({message:'client saved in db succesfully!'});
 
     }

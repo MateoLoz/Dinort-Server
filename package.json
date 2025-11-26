@@ -32,7 +32,9 @@
     "express": "^5.1.0",
     "express-rate-limit": "^8.1.0",
     "multer": "^2.0.2",
+    "reflect-metadata": "^0.2.2",
     "supabase": "^2.48.3",
+    "tsyringe": "^4.10.0",
     "zod": "^4.1.11"
   }
 }
