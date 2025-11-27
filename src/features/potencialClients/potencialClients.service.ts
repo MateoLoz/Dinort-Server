@@ -15,7 +15,7 @@ export class PotencialClientsService implements  IPotencialClientsInterface{
           const {data, error} = await supabase
           .from("potencial_clients")
           .insert(dbPayload)
-          .select(`email, full_name, description, how_heard, phone_number`)
+          .select(`email, full_name, description, how_heard, phone_number, Organization`)
           .maybeSingle()
 
           if(error) {
