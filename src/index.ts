@@ -3,6 +3,7 @@ import logger from 'morgan'
 import router from './router/router';
 import cors from 'cors'
 import 'dotenv/config';
+import './features/Email/email.listener';
 
 const app = express();
 

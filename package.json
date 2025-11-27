@@ -21,19 +21,26 @@
     "@types/node": "^24.6.2",
     "@types/response-time": "^2.3.9",
     "morgan": "^1.10.1",
+    "react-email": "5.0.5",
     "ts-node": "^10.9.2",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@react-email/components": "1.0.1",
     "@supabase/supabase-js": "^2.58.0",
+    "@tailwindcss/vite": "^4.1.17",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "express-rate-limit": "^8.1.0",
     "multer": "^2.0.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "reflect-metadata": "^0.2.2",
+    "resend": "^6.5.2",
     "supabase": "^2.48.3",
+    "tailwindcss": "^4.1.17",
     "tsyringe": "^4.10.0",
     "zod": "^4.1.11"
   }
