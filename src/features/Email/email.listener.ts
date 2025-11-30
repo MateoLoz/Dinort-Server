@@ -1,8 +1,9 @@
 import { eventBus } from "../../lib/emmiter";
-import { sendBusinnesPropousal, sendConfirmationProposal } from "./email.controller";
+import { sendBusinnesPropousalConfirmation, sendBusinnesProposal } from "./email.controller";
 
 eventBus.on("sendProposal", async (data) => {
-  await sendBusinnesPropousal(data);
-  await sendConfirmationProposal(data.email, data.full_name);
+  await sendBusinnesProposal(data);
+  await sendBusinnesPropousalConfirmation(data);
+
   console.log("📩 Mail enviado después de que el controller terminó.");
 });
