@@ -1,6 +1,8 @@
 import { Resend } from "resend";
 import { PotencialClient } from "../potencialClients/potencialClients.types";
 import BusinnesConfirmationEmail from "./templates/ProposalConfirmationEmail";
+import ProposalEmail from "./templates/ProposalEmail";
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
  export const sendBusinnesPropousalConfirmation = async(userData : PotencialClient) => {
@@ -27,15 +29,7 @@ export const sendBusinnesProposal = async( userData : PotencialClient) => {
       from: 'Acme <onboarding@resend.dev>',
       to: ['mateobinance1@gmail.com'],
       subject: `Nueva Propuesta de negocio Recibida!`,
-      html: `
-        <h2>${userData.full_name} de ${userData.Organization} escribio</h2>
-        <p>
-         ${userData.description}
-        </p>
-        Telefono: ${userData.phone_number}
-        mail: ${userData.email}
-        escucho de nosotro: ${userData.how_heard}
-      `
+      react: ProposalEmail({authorName: userData.full_name, authorOrganization: userData.Organization, message: userData.description, howHeard: userData.how_heard, phoneNumber: userData.phone_number }) ,
   })
   return data;
    } catch (err) {
