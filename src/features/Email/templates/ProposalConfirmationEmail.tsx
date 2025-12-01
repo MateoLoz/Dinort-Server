@@ -8,6 +8,7 @@ import {
   Preview,
   Container,
   Section,
+  Img,
   Row,
   Text,
   Hr,
@@ -45,7 +46,7 @@ const styles = {
   },
   reviewBox: {
     fontSize: "18px",
-    FontStyle:'italic',
+    FontStyle:"italic",
     lineHeight: "1.4",
     color: "#484848",
     padding: "24px",
@@ -111,6 +112,14 @@ export default function BusinnesConfirmationEmail({
         <Preview>{previewText}</Preview>
 
         <Container style={styles.container}>
+        <Section>
+              <Img
+                src={'https://i.postimg.cc/Hndmr0bV/dinort-logo.png'}
+                width="150"
+                height="80"
+                alt="Dinort Mecanizados S.A.S"
+              />
+            </Section>
           <Section>
             <Row>
               <Text style={styles.title}>Mensaje recibido con Exito!</Text>
