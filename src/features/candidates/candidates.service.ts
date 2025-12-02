@@ -11,7 +11,11 @@ class CandidateService implements ICandidates{
 
       console.log(dbPayload);
 
-        const {data, error} = await supabase.from("candidates").insert(dbPayload).select()
+        const {data, error} = await supabase
+        .from("candidates")
+        .insert(dbPayload)
+        .select(`cover_letter,cv,email,full_name,heard_from`)
+        .maybeSingle();
 
         if(error) {
             console.log('failed to insert candidate', error.message);
@@ -48,10 +52,11 @@ class CandidateService implements ICandidates{
         const { data } = await supabase
         .storage
         .from("candidates")
-        .getPublicUrl(path);
-        
+        .createSignedUrl(path, 86400); 
+
         if(!data) return null;
-        return data;
+
+        return data.signedUrl;
     }
 }
 

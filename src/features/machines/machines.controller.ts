@@ -8,7 +8,7 @@ export async function MachineController (req: Request, res : Response) {
 
   if(!response) {
     res.status(404).json({
-        message:'saomething went wrong!'
+        message:'something went wrong!'
     })
   }
   res.set('cache-Control','public, max-age=86400')
