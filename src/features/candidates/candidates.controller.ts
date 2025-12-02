@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 import CandidateService from "./candidates.service";
+import { eventBus } from "../../lib/emmiter";
 
 class CandidatesController {
     constructor (private readonly candidateservice: CandidateService){}
@@ -16,12 +17,12 @@ class CandidatesController {
 
          const fileUrl = await this.candidateservice.getSignedUrlOfCurriculum(file.path);
         
-        payload.Curriculum = fileUrl?.publicUrl;
+        payload.Curriculum = fileUrl;
 
         const response = await this.candidateservice.postCandidates(payload);
-
         if(!response) return res.status(500).json({message:'something went wrong!'});
-
+        eventBus.emit('sendResume', response);
+        
         return res.status(201).json({message:'Curriculum guardado con exito!'});
     }
 }
