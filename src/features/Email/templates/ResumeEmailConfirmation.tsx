@@ -11,6 +11,8 @@ import {
     Row,
     Text,
     Hr,
+    Column,
+    Link
   } from "@react-email/components";
 
 interface Props {
@@ -107,14 +109,13 @@ interface Props {
         <Container style={styles.container}>
         <Section>
               <Img
-                src={'https://i.postimg.cc/Hndmr0bV/dinort-logo.png'}
+                src={'https://i.postimg.cc/Yqx82TQ7/dinort-logo-removebg-preview.png'}
                 width="150"
                 height="80"
                 alt="Dinort Mecanizados S.A.S"
               />
             </Section>
-          <Hr style={styles.hr} />
-          <Section className='pt-12'>
+          <Section style={{paddingTop:'12px'}} >
             <Row>
             <Text style={styles.text}>
               Hola {authorName},

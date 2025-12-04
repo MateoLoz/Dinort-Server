@@ -44,7 +44,6 @@ export const sendBusinnesProposal = async ( userData : PotencialClient) => {
 export const sendResumeEmail = async (userData : Candidates) => {
  try {
   console.log('📤 sending resume email');
-  console.log(userData);
   const data = await resend.emails.send({
     from: 'Acme <onboarding@resend.dev>',
     to: ['mateobinance1@gmail.com'],
@@ -61,7 +60,6 @@ return data;
 export const sendResumeEmailConfirmation = async ( userData : Candidates ) => {
   try {
     console.log('📤 sending resume email');
-    console.log(userData);
     const data = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
       to: ['mateobinance1@gmail.com'],
