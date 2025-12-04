@@ -13,6 +13,7 @@ import {
     Text,
     Hr,
     Link,
+    Column
   } from "@react-email/components";
 
   interface Props  {
@@ -112,15 +113,15 @@ export default function ResumeEmail ({ authorName, email, coverLetter, howHeard,
         <Container style={styles.container}>
         <Section>
               <Img
-                src={'https://i.postimg.cc/Hndmr0bV/dinort-logo.png'}
+                src={'https://i.postimg.cc/Yqx82TQ7/dinort-logo-removebg-preview.png'}
                 width="150"
                 height="80"
                 alt="Dinort Mecanizados S.A.S"
               />
             </Section>
-          <Hr style={styles.hr} />
+         
           { coverLetter?.length 
-          ? <Section>
+          ? <Section style={{paddingTop:'12px'}}>
             <Row>
               <Text style={styles.title}>Carta de presentacion de {authorName}</Text>
 
@@ -129,18 +130,133 @@ export default function ResumeEmail ({ authorName, email, coverLetter, howHeard,
           </Section> 
           : null }
          
-          <Hr style={styles.hr} />
-
-          <Section>
-            <Row>
-              <Text style={styles.title}>Datos Personales</Text>
-
-              <Text className="text-[#9ca299] text-[14px] leading-[24px] mb-2.5">Nombre: <strong>{authorName}</strong></Text>
-              <Text className="text-[#9ca299] text-[14px] leading-[24px] mb-2.5">Curriculum: <Link href={Curriculum}>{authorName} cv</Link></Text> 
-              <Text className="text-[#9ca299] text-[14px] leading-[24px] mb-2.5">Email: {email}</Text>
-              <Text className="text-[#9ca299] text-[14px] leading-[24px] mb-2.5">Escucho de nosotros: <strong>{howHeard}</strong></Text>
-            </Row>
-          </Section>
+<Section style={{paddingTop:'12px'}}>
+  <Row style={{ marginBottom: '8px' }}>
+    <Column
+      style={{
+        minHeight: '112px',
+        borderRadius: '16px',
+        backgroundColor: '#f3f4f6',
+        padding: '16px',
+      }}
+    >
+      <p
+        style={{
+          marginBottom: '0',
+          fontSize: '24px',
+          lineHeight: '32px',
+          fontWeight: 'bold',
+          letterSpacing: '-0.025em',
+          fontVariantNumeric: 'tabular-nums',
+          color: '#111827',
+        }}
+      >
+       {authorName}
+      </p>
+      <div style={{ color: '#374151' }}>
+        <p
+          style={{ marginBottom: '0', fontSize: '15px', lineHeight: '22px', textDecoration:'none', color:'#000' }}
+        >
+          {email}
+        </p>
+        <p
+          style={{
+            marginBottom: '0',
+            marginTop: '4px',
+            fontSize: '13px',
+            lineHeight: '18px',
+            color: '#4b5563',
+          }}
+        >
+          Nombre y Email del candidato 
+        </p>
+      </div>
+    </Column>
+  </Row>
+  <Row style={{ marginBottom: '8px' }}>
+    <Column
+      style={{
+        minHeight: '192px',
+        borderRadius: '16px',
+        backgroundColor: '#FDCB5A',
+        padding: '16px',
+      }}
+    >
+      <p
+        style={{
+          marginBottom: '0',
+          fontSize: '24px',
+          lineHeight: '32px',
+          fontWeight: 'bold',
+          letterSpacing: '-0.025em',
+          fontVariantNumeric: 'tabular-nums',
+          color: '#000',
+        }}
+      >
+        Fuente
+      </p>
+      <div>
+        <p
+          style={{ marginBottom: '0', fontSize: '15px', lineHeight: '22px', color:'#1c1c1c', fontWeight: 'normal' }}
+        >
+         {howHeard}
+        </p>
+        <p
+          style={{
+            marginBottom: '0',
+            marginTop: '4px',
+            fontSize: '13px',
+            lineHeight: '18px',
+            color: '#353536',
+          }}
+        >
+          Nos conocio a travez de {howHeard}
+        </p>
+      </div>
+    </Column>
+  </Row>
+  <Row>
+    <Column
+      style={{
+        minHeight: '128px',
+        borderRadius: '16px',
+        backgroundColor: '#001129',
+        padding: '16px',
+      }}
+    >
+      <p
+        style={{
+          marginBottom: '0',
+          fontSize: '24px',
+          lineHeight: '32px',
+          fontWeight: 'bold',
+          letterSpacing: '-0.025em',
+          fontVariantNumeric: 'tabular-nums',
+          color: '#eef2ff',
+        }}
+      >
+        Curriculum
+      </p>
+      <div style={{ color: '#B7B7B7' }}>
+        <p
+          style={{ marginBottom: '0', fontSize: '15px', lineHeight: '22px', color: '#B7B7B7' }}
+        >
+          El Curriculum que nos envio el candidato {authorName}
+        </p>
+        <p
+          style={{
+            marginBottom: '0',
+            marginTop: '4px',
+            fontSize: '13px',
+            lineHeight: '18px',
+          }}
+        >
+        <Link style={{textDecoration: 'underline', color:'#fff', fontWeight:'normal'}} href={Curriculum}>{authorName} cv</Link>
+        </p>
+      </div>
+    </Column>
+  </Row>
+</Section>
           <Hr style={styles.hr} />
           <Section>
               <Row>
