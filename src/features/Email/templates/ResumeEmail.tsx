@@ -113,7 +113,7 @@ export default function ResumeEmail ({ authorName, email, coverLetter, howHeard,
         <Container style={styles.container}>
         <Section>
               <Img
-                src={'https://i.postimg.cc/Yqx82TQ7/dinort-logo-removebg-preview.png'}
+                src={'https://i.postimg.cc/Hndmr0bV/dinort_logo.png'}
                 width="150"
                 height="80"
                 alt="Dinort Mecanizados S.A.S"
@@ -135,6 +135,7 @@ export default function ResumeEmail ({ authorName, email, coverLetter, howHeard,
     <Column
       style={{
         minHeight: '112px',
+        width:'80vw',
         borderRadius: '16px',
         backgroundColor: '#f3f4f6',
         padding: '16px',
@@ -177,6 +178,7 @@ export default function ResumeEmail ({ authorName, email, coverLetter, howHeard,
     <Column
       style={{
         minHeight: '192px',
+        width:'80vw',
         borderRadius: '16px',
         backgroundColor: '#FDCB5A',
         padding: '16px',
@@ -219,6 +221,7 @@ export default function ResumeEmail ({ authorName, email, coverLetter, howHeard,
     <Column
       style={{
         minHeight: '128px',
+        width:'80vw',
         borderRadius: '16px',
         backgroundColor: '#001129',
         padding: '16px',
