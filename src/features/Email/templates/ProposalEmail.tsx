@@ -112,14 +112,14 @@ export default function ProposalEmail ({authorName, authorOrganization, message,
         <Container style={styles.container}>
         <Section>
               <Img
-                src={'https://i.postimg.cc/Hndmr0bV/dinort-logo.png'}
+                src={'https://i.postimg.cc/Yqx82TQ7/dinort-logo-removebg-preview.png'}
                 width="150"
                 height="80"
                 alt="Dinort Mecanizados S.A.S"
               />
             </Section>
 
-          <Section>
+          <Section style={{paddingTop:'12px'}}>
             <Row>
               <Text style={styles.title}>{authorName} de {authorOrganization} escribio</Text>
 
