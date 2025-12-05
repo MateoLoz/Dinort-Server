@@ -1,7 +1,9 @@
 import express from 'express';
 import logger from 'morgan'
 import router from './router/router';
-import cors from 'cors'
+import cors from 'cors';
+import { CronJob } from 'cron';
+
 import 'dotenv/config';
 import './features/Email/email.listener';
 
@@ -21,6 +23,17 @@ app.get('/',(req,res)=> {
         message:'Server is now Online!'
     })
 })
+
+const job = CronJob.from({
+	cronTime: '* 15 * * * *',
+	onTick: function () {
+        console.log('Awake Server!');
+		fetch(`${process.env.PROD_API_URL}/`)
+	},
+	start: true,
+});
+
+job.start();
 
 app.use('/api', router);
 
