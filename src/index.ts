@@ -28,7 +28,7 @@ const job = CronJob.from({
 	cronTime: '* 15 * * * *',
 	onTick: function () {
         console.log('Awake Server!');
-        if(process.env.PROD__API_URL) {
+        if(process.env.PROD_API_URL) {
             fetch(`${process.env.PROD_API_URL}/`)
         }
 	},
