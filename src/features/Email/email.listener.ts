@@ -4,13 +4,12 @@ import { sendBusinnesPropousalConfirmation, sendBusinnesProposal, sendResumeEmai
 eventBus.on("sendProposal", async (data) => {
   await sendBusinnesProposal(data);
   await sendBusinnesPropousalConfirmation(data);
-
-  console.log("📩 Mail enviado después de que el controller terminó.");
+  console.log("📩 Mails de propuestas enviados!");
 });
 
 eventBus.on("sendResume", async (data) => {
   await sendResumeEmail(data);
   await sendResumeEmailConfirmation(data);
 
-  console.log("📩 Mail enviado después de que el controller terminó.");
+  console.log("📩 Mail de curriculums enviados!");
 })
