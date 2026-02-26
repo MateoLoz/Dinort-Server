@@ -31,7 +31,7 @@ export const sendBusinnesProposal = async (userData: PotencialClient) => {
   try {
     console.log('📬 Enviando propuesta...');
     const data = await resend.emails.send({
-      from: `${process.env.NO_REPLY_EMAIL}`,
+      from: `${process.env.SERVER_NO_REPLY_EMAIL}`,
       to: [`${process.env.SERVER_EMAIL}`],
       subject: `Nueva Propuesta de negocio, ${userData.full_name} de ${userData.Organization}`,
       react: ProposalEmail({ authorName: userData.full_name, authorOrganization: userData.Organization, message: userData.description, howHeard: userData.how_heard, phoneNumber: userData.phone_number }),
@@ -47,7 +47,7 @@ export const sendResumeEmail = async (userData: Candidates) => {
   try {
     console.log('📤 Enviando curriculum...');
     const data = await resend.emails.send({
-      from: `${process.env.NO_REPLY_EMAIL}`,
+      from: `${process.env.SERVER_NO_REPLY_EMAIL}`,
       to: [`${process.env.SERVER_EMAIL}`],
       subject: `Nuevo Curriculum recibido!`,
       react: ResumeEmail({ authorName: userData.full_name, email: userData.email, coverLetter: userData.cover_letter, howHeard: userData.heard_from, Curriculum: userData.cv }),
