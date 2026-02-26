@@ -34,7 +34,7 @@ export const sendBusinnesProposal = async (userData: PotencialClient) => {
       from: `${process.env.SERVER_NO_REPLY_EMAIL}`,
       to: [`${process.env.SERVER_EMAIL}`],
       subject: `Nueva Propuesta de negocio, ${userData.full_name} de ${userData.Organization}`,
-      react: ProposalEmail({ authorName: userData.full_name, authorOrganization: userData.Organization, message: userData.description, howHeard: userData.how_heard, phoneNumber: userData.phone_number }),
+      react: ProposalEmail({ authorName: userData.full_name, authorOrganization: userData.Organization, message: userData.description, howHeard: userData.how_heard, phoneNumber: userData.phone_number, email: userData.email }),
     })
     console.log('🟢 propuesta enviada!')
     return data;
