@@ -48,7 +48,7 @@ export const sendResumeEmail = async (userData: Candidates) => {
     console.log('📤 Enviando curriculum...');
     const data = await resend.emails.send({
       from: `${process.env.SERVER_NO_REPLY_EMAIL}`,
-      to: [`${process.env.SERVER_EMAIL}`],
+      to: [`${process.env.SERVER_RRHH_EMAIL}`],
       subject: `Nuevo Curriculum recibido!`,
       react: ResumeEmail({ authorName: userData.full_name, email: userData.email, coverLetter: userData.cover_letter, howHeard: userData.heard_from, Curriculum: userData.cv }),
     })
